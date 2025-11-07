@@ -8,7 +8,7 @@
   },
   "hero": {
     "title": "Yuridik xizmatlarda mukammallik",
-    "subtitle": "Black Swan Law mijozlar muvaffaqiyatiga sodiq holda keng qamrovli yuridik yechimlarni taqdim etadi",
+    "subtitle": "Law agency mijozlar muvaffaqiyatiga sodiq holda keng qamrovli yuridik yechimlarni taqdim etadi",
     "cta": "Konsultatsiya olish",
     "experience": "Yillik tajriba"
   },
@@ -41,9 +41,9 @@
     }
   },
   "about": {
-    "title": "Black Swan Law haqida",
+    "title": "Law agency haqida",
     "subtitle": "Yuridik innovatsiyalarda yetakchi",
-    "description": "Black Swan Law mukammal yuridik xizmatlarni taqdim etishga bag'ishlangan yetakchi xalqaro yuridik firma. Bizning tajribali advokatlar jamoamiz mijozlarimiz uchun ajoyib natijalarni taqdim etish uchun chuqur yuridik tajriba va innovatsion yondashuvlarni birlashtiradi.",
+    "description": "Law agency mukammal yuridik xizmatlarni taqdim etishga bag'ishlangan yetakchi xalqaro yuridik firma. Bizning tajribali advokatlar jamoamiz mijozlarimiz uchun ajoyib natijalarni taqdim etish uchun chuqur yuridik tajriba va innovatsion yondashuvlarni birlashtiradi.",
     "mission": "Bizning vazifamiz - mijozlarimizga murakkab huquqiy landshaftlarda ishonch bilan harakat qilib, maqsadlariga erishishga yordam beradigan strategik yuridik maslahat berishdir.",
     "stats": {
       "clients": "Mamnun mijozlar",
@@ -59,6 +59,20 @@
       "managing": "Boshqaruvchi hamkor",
       "senior": "Katta hamkor",
       "partner": "Hamkor"
+    },
+    "members": {
+      "member1": {
+        "name": "Dilshod Raxmonov"
+      },
+      "member2": {
+        "name": "Shahzoda Muhammadova"
+      },
+      "member3": {
+        "name": "Otabek Mutalov"
+      },
+      "member4": {
+        "name": "Rayhon Ganieva"
+      }
     }
   },
   "contact": {
@@ -81,8 +95,8 @@
     }
   },
   "footer": {
-    "description": "Black Swan Law - 1995 yildan beri yuridik xizmatlarda mukammallik",
-    "copyright": "© 2025 Black Swan Law. Barcha huquqlar himoyalangan.",
+    "description": "Law agency - 1995 yildan beri yuridik xizmatlarda mukammallik",
+    "copyright": "© 2025 Law agency. Barcha huquqlar himoyalangan.",
     "privacy": "Maxfiylik siyosati",
     "terms": "Foydalanish shartlari"
   }

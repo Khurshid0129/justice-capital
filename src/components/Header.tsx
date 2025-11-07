@@ -19,7 +19,7 @@ export const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold text-foreground font-playfair tracking-wider">
-            <span className="text-primary">BLACK SWAN</span> LAW
+            <span className="text-primary">Law agency</span>
           </div>
 
           {/* Desktop Navigation */}

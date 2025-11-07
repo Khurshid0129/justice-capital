@@ -12,8 +12,15 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-secondary">
-      <div className="container mx-auto px-6">
+    <section 
+      id="about" 
+      className="py-24 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1920&q=80')",
+      }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/85 to-black/90"></div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-playfair">

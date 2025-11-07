@@ -6,22 +6,22 @@ export const Team = () => {
 
   const team = [
     {
-      name: 'Alexander Morrison',
+      nameKey: 'member1',
       role: 'managing',
       specialty: 'Corporate Law',
     },
     {
-      name: 'Victoria Chen',
+      nameKey: 'member2',
       role: 'senior',
       specialty: 'International Law',
     },
     {
-      name: 'David Williams',
+      nameKey: 'member3',
       role: 'partner',
       specialty: 'Litigation',
     },
     {
-      name: 'Sarah Anderson',
+      nameKey: 'member4',
       role: 'partner',
       specialty: 'Intellectual Property',
     },
@@ -45,10 +45,10 @@ export const Team = () => {
             >
               <CardContent className="p-0">
                 <div className="aspect-square bg-secondary flex items-center justify-center text-6xl font-bold text-primary/20 group-hover:text-primary/30 transition-colors">
-                  {member.name.charAt(0)}
+                  {t(`team.members.${member.nameKey}.name`).charAt(0)}
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-2 font-playfair">{member.name}</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2 font-playfair">{t(`team.members.${member.nameKey}.name`)}</h3>
                   <p className="text-primary text-sm mb-1 font-sans">{t(`team.role.${member.role}`)}</p>
                   <p className="text-muted-foreground text-sm font-sans">{member.specialty}</p>
                 </div>
