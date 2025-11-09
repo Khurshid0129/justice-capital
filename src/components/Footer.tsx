@@ -10,24 +10,24 @@ export const Footer = () => {
       <div className="container mx-auto px-6">
         <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
           <div>
-            <div className="text-2xl font-bold text-foreground mb-4 font-playfair tracking-wider transition-transform duration-300 hover:scale-105">
-              <span className="text-primary">LOW</span> AGENCY
+            <div className="text-2xl font-bold text-white mb-4 tracking-wider transition-transform duration-300 hover:scale-105">
+              <span className="text-white">LOW</span> AGENCY
             </div>
-            <p className="text-muted-foreground font-sans">{t('footer.description')}</p>
+            <p className="text-white/80">{t('footer.description')}</p>
           </div>
 
           <div>
-            <h4 className="text-lg font-bold text-foreground mb-4 font-playfair">{t('nav.services')}</h4>
-            <ul className="space-y-2 text-muted-foreground font-sans">
-              <li className="transition-colors duration-300 hover:text-primary cursor-pointer">{t('services.corporate.title')}</li>
-              <li className="transition-colors duration-300 hover:text-primary cursor-pointer">{t('services.litigation.title')}</li>
-              <li className="transition-colors duration-300 hover:text-primary cursor-pointer">{t('services.international.title')}</li>
+            <h4 className="text-lg font-bold text-white mb-4">{t('nav.services')}</h4>
+            <ul className="space-y-2 text-white/80">
+              <li className="transition-colors duration-300 hover:text-white cursor-pointer">{t('services.corporate.title')}</li>
+              <li className="transition-colors duration-300 hover:text-white cursor-pointer">{t('services.litigation.title')}</li>
+              <li className="transition-colors duration-300 hover:text-white cursor-pointer">{t('services.international.title')}</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-bold text-foreground mb-4 font-playfair">{t('contact.info.address')}</h4>
-            <ul className="space-y-2 text-muted-foreground font-sans">
+            <h4 className="text-lg font-bold text-white mb-4">{t('contact.info.address')}</h4>
+            <ul className="space-y-2 text-white/80">
               <li>{t('contact.info.addressText')}</li>
               <li>+1 (555) 123-4567</li>
               <li>contact@blackswan.law</li>
@@ -36,8 +36,8 @@ export const Footer = () => {
         </div>
 
         <div className={`border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
-          <p className="text-muted-foreground text-sm font-sans">{t('footer.copyright')}</p>
-          <div className="flex gap-6 text-sm text-muted-foreground font-sans">
+          <p className="text-white/70 text-sm">{t('footer.copyright')}</p>
+          <div className="flex gap-6 text-sm text-white/70">
             <a href="#" className="hover:text-primary transition-colors duration-300">
               {t('footer.privacy')}
             </a>

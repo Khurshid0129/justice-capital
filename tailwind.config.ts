@@ -15,15 +15,15 @@ export default {
     extend: {
       fontFamily: {
         /*
-          Fonts updated for corporate legal look:
-          - body: Open Sans (or Roboto)
-          - heading: Roboto Slab (or Merriweather)
+          Two main fonts:
+          - Headings: Times New Roman for elegant, professional look
+          - Body: Arial for clean, readable text
         */
-  'heading': ['Roboto Slab', 'Merriweather', 'serif'],
-  /* keep a legacy alias used in components */
-  'playfair': ['Roboto Slab', 'Merriweather', 'serif'],
-  'sans': ['Open Sans', 'Roboto', 'sans-serif'],
-  'poppins': ['Poppins', 'sans-serif'],
+        'heading': ['Times New Roman', 'serif'],
+        /* keep aliases used in components */
+        'playfair': ['Times New Roman', 'serif'],
+        'serif': ['Times New Roman', 'serif'],
+        'sans': ['Arial', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -18,12 +18,12 @@ export const Header = () => {
   <header className="fixed top-0 left-0 right-0 z-50 site-header bg-secondary text-white shadow-md animate-fade-in-down">
       <nav className="container mx-auto py-4">
         <div className="flex items-center justify-between">
-          <div className="text-lg sm:text-2xl font-bold font-playfair tracking-wider transition-transform duration-300 hover:scale-105">
-            <span className="text-white">Law agency</span>
+          <div className="text-lg sm:text-2xl font-bold tracking-wider transition-transform duration-300 hover:scale-105">
+            <span className="text-white">Justice Capital</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 font-sans">
+          <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection('home')}
               className="text-white/90 hover:text-white transition-colors uppercase text-sm tracking-wide font-medium"

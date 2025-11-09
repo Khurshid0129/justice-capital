@@ -8,7 +8,7 @@
   },
   "hero": {
     "title": "Yuridik xizmatlarda mukammallik",
-    "subtitle": "Law agency mijozlar muvaffaqiyatiga sodiq holda keng qamrovli yuridik yechimlarni taqdim etadi",
+  "subtitle": "Biz O'zbekistonda professional da'vo va arbitraj moliyalashtirishini taklif qiluvchi birinchi kompaniyamiz.\nBiz kuchli ishlar likvidlik bilan cheklanmasligi uchun sud xarajatlari, ekspertlar va sud xarajatlarini moliyalashtiramiz.\nBizning echimlarimiz yagona ish va portfel moliyalashtirish, ijro va xalqaro arbitrajni qamrab oladi.\nBizning modelimiz shaffof, axloqiy va xalqaro da'vo moliyalashtirish standartlariga mos keladi.\nBizning missiyamiz — adolatni moliyaviy jihatdan erishish mumkin qilishdir.",
     "cta": "Konsultatsiya olish",
     "experience": "Yillik tajriba"
   },
@@ -41,9 +41,9 @@
     }
   },
   "about": {
-    "title": "Law agency haqida",
+  "title": "Justice Capital haqida",
     "subtitle": "Yuridik innovatsiyalarda yetakchi",
-    "description": "Law agency mukammal yuridik xizmatlarni taqdim etishga bag'ishlangan yetakchi xalqaro yuridik firma. Bizning tajribali advokatlar jamoamiz mijozlarimiz uchun ajoyib natijalarni taqdim etish uchun chuqur yuridik tajriba va innovatsion yondashuvlarni birlashtiradi.",
+  "description": "Justice Capital mukammal yuridik xizmatlarni taqdim etishga bag'ishlangan yetakchi xalqaro yuridik firma. Bizning tajribali advokatlar jamoamiz mijozlarimiz uchun ajoyib natijalarni taqdim etish uchun chuqur yuridik tajriba va innovatsion yondashuvlarni birlashtiradi.",
     "mission": "Bizning vazifamiz - mijozlarimizga murakkab huquqiy landshaftlarda ishonch bilan harakat qilib, maqsadlariga erishishga yordam beradigan strategik yuridik maslahat berishdir.",
     "stats": {
       "clients": "Mamnun mijozlar",
@@ -95,8 +95,8 @@
     }
   },
   "footer": {
-    "description": "Law agency - 1995 yildan beri yuridik xizmatlarda mukammallik",
-    "copyright": "© 2025 Law agency. Barcha huquqlar himoyalangan.",
+  "description": "Justice Capital - 1995 yildan beri yuridik xizmatlarda mukammallik",
+  "copyright": "© 2025 Justice Capital. Barcha huquqlar himoyalangan.",
     "privacy": "Maxfiylik siyosati",
     "terms": "Foydalanish shartlari"
   }

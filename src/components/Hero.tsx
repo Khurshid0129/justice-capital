@@ -27,17 +27,11 @@ export const Hero = () => {
             />
           </div>
 
-          <div className="mb-6 animate-fade-in-down hidden lg:block">
-            <span className="text-white font-semibold font-sans text-sm tracking-[0.2em] uppercase bg-white/10 px-4 py-2 rounded-full">
-              25+ {t('hero.experience')}
-            </span>
-          </div>
-          
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8 leading-tight font-serif animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8 leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
             {t('hero.title')}
           </h1>
           
-          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-12 leading-relaxed font-sans font-light animate-fade-in-up max-w-lg" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-12 leading-relaxed font-light animate-fade-in-up max-w-lg" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
             {t('hero.subtitle')}
           </p>
           
