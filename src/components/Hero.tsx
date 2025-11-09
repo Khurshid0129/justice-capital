@@ -18,7 +18,16 @@ export const Hero = () => {
       {/* Левая часть с текстом */}
       <div className="w-full lg:w-1/2 bg-primary flex items-center justify-center px-6 py-20 lg:py-0">
         <div className="max-w-xl mx-auto lg:mx-0 lg:ml-auto lg:mr-20">
-          <div className="mb-6 animate-fade-in-down">
+          {/* Mobile: show image inside the content area (hidden on lg and up) */}
+          <div className="mb-6 lg:hidden">
+            <img
+              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80"
+              alt="Office building"
+              className="w-full rounded-md object-cover shadow-elegant"
+            />
+          </div>
+
+          <div className="mb-6 animate-fade-in-down hidden lg:block">
             <span className="text-white font-semibold font-sans text-sm tracking-[0.2em] uppercase bg-white/10 px-4 py-2 rounded-full">
               25+ {t('hero.experience')}
             </span>
@@ -45,7 +54,8 @@ export const Hero = () => {
       </div>
 
       {/* Правая часть с изображением */}
-      <div className="w-full lg:w-1/2 min-h-[50vh] lg:min-h-full relative">
+      {/* Right-side decorative/background image: shown on lg and up, hidden on small screens */}
+      <div className="hidden lg:block w-full lg:w-1/2 min-h-[50vh] lg:min-h-full relative">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
