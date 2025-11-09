@@ -14,9 +14,16 @@ export default {
     },
     extend: {
       fontFamily: {
-        'playfair': ['Playfair Display', 'serif'],
-        'sans': ['Open Sans', 'sans-serif'],
-        'poppins': ['Poppins', 'sans-serif'],
+        /*
+          Two main fonts:
+          - Headings: Times New Roman for elegant, professional look
+          - Body: Arial for clean, readable text
+        */
+        'heading': ['Times New Roman', 'serif'],
+        /* keep aliases used in components */
+        'playfair': ['Times New Roman', 'serif'],
+        'serif': ['Times New Roman', 'serif'],
+        'sans': ['Arial', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

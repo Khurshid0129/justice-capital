@@ -3,7 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Linkedin, Instagram, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
@@ -29,40 +29,31 @@ export const Contact = () => {
     {
       icon: Phone,
       label: t('contact.info.phone'),
-      value: '+1 (555) 123-4567',
+      value: '+998 (94) 241-21-02',
     },
     {
       icon: Mail,
       label: t('contact.info.email'),
-      value: 'contact@blackswan.law',
-    },
-    {
-      icon: Clock,
-      label: t('contact.info.hours'),
-      value: t('contact.info.hoursText'),
+      value: 'contact@justicecapita.uz',
     },
   ];
 
   return (
     <section 
       id="contact" 
-      className="py-24 relative overflow-hidden bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80')",
-      }}
+      className="py-24 relative overflow-hidden bg-accent/30"
       ref={ref}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/85 to-black/90"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className={`text-center mb-16 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-playfair">
+          <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
             {t('contact.title')}
           </h2>
-          <p className="text-xl text-muted-foreground font-sans">{t('contact.subtitle')}</p>
+          <p className="text-xl text-secondary/80">{t('contact.subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <Card className={`bg-card border-border hover-lift transition-all duration-300 ${
+          <Card className={`bg-white shadow-lg border-accent/20 hover-lift transition-all duration-300 ${
             isVisible ? 'animate-slide-in-left' : 'opacity-0'
           }`} style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
             <CardContent className="p-8">
@@ -70,7 +61,7 @@ export const Contact = () => {
                 <div>
                   <Input
                     placeholder={t('contact.form.name')}
-                    className="bg-secondary border-border font-sans transition-all duration-300 focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className="bg-white border border-gray-200 placeholder-gray-500 transition-all duration-300 focus:border-primary focus:ring-2 focus:ring-primary/20"
                     required
                   />
                 </div>
@@ -78,7 +69,7 @@ export const Contact = () => {
                   <Input
                     type="email"
                     placeholder={t('contact.form.email')}
-                    className="bg-secondary border-border font-sans transition-all duration-300 focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className="bg-white border border-gray-200 placeholder-gray-500 transition-all duration-300 focus:border-primary focus:ring-2 focus:ring-primary/20"
                     required
                   />
                 </div>
@@ -86,20 +77,20 @@ export const Contact = () => {
                   <Input
                     type="tel"
                     placeholder={t('contact.form.phone')}
-                    className="bg-secondary border-border font-sans transition-all duration-300 focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className="bg-white border border-gray-200 placeholder-gray-500 transition-all duration-300 focus:border-primary focus:ring-2 focus:ring-primary/20"
                   />
                 </div>
                 <div>
                   <Textarea
                     placeholder={t('contact.form.message')}
                     rows={6}
-                    className="bg-secondary border-border font-sans transition-all duration-300 focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className="bg-white border border-gray-200 placeholder-gray-500 transition-all duration-300 focus:border-primary focus:ring-2 focus:ring-primary/20"
                     required
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-poppins uppercase tracking-wide transition-all duration-300 hover:scale-105"
+                  className="w-full bg-secondary text-white hover:bg-secondary/90 font-sans uppercase tracking-wide transition-all duration-300 hover:scale-105"
                 >
                   {t('contact.form.submit')}
                 </Button>
@@ -113,23 +104,68 @@ export const Contact = () => {
               return (
                 <Card 
                   key={index} 
-                  className={`bg-card border-border hover-lift transition-all duration-300 group ${
+                  className={`bg-white shadow-lg border-accent/20 hover-lift transition-all duration-300 group ${
                     isVisible ? 'animate-slide-in-right' : 'opacity-0'
                   }`}
                   style={{ animationDelay: `${0.3 + index * 0.1}s`, animationFillMode: 'both' }}
                 >
                   <CardContent className="p-6 flex items-start gap-4">
-                    <div className="w-12 h-12 bg-secondary flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:bg-primary/10 group-hover:scale-110">
+                    <div className="w-12 h-12 bg-accent/30 flex items-center justify-center flex-shrink-0 rounded-lg transition-all duration-300 group-hover:bg-accent/50 group-hover:scale-110">
                       <Icon className="w-6 h-6 text-primary transition-transform duration-300 group-hover:rotate-6" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-foreground mb-1 font-sans">{item.label}</h3>
-                      <p className="text-muted-foreground font-sans">{item.value}</p>
+                      <h3 className="text-lg font-bold text-secondary mb-1 font-serif">{item.label}</h3>
+                      <p className="text-secondary/80 font-sans">{item.value}</p>
                     </div>
                   </CardContent>
                 </Card>
               );
             })}
+              {/* Social links card (LinkedIn, Instagram, Telegram) */}
+              <Card 
+                className={`bg-white shadow-lg border-accent/20 hover-lift transition-all duration-300 group ${
+                  isVisible ? 'animate-slide-in-right' : 'opacity-0'
+                }`}
+                style={{ animationDelay: `${0.3 + contactInfo.length * 0.1}s`, animationFillMode: 'both' }}
+              >
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-accent/30 flex items-center justify-center flex-shrink-0 rounded-lg">
+                      <Linkedin className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-secondary mb-1">LinkedIn</h3>
+                      <p className="text-secondary/80">
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Visit our LinkedIn</a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex items-center gap-4">
+                    <div className="w-12 h-12 bg-accent/30 flex items-center justify-center flex-shrink-0 rounded-lg">
+                      <Instagram className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-secondary mb-1">Instagram</h3>
+                      <p className="text-secondary/80">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Follow us on Instagram</a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex items-center gap-4">
+                    <div className="w-12 h-12 bg-accent/30 flex items-center justify-center flex-shrink-0 rounded-lg">
+                      <Send className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-secondary mb-1">Telegram</h3>
+                      <p className="text-secondary/80">
+                        <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Join us on Telegram</a>
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
           </div>
         </div>
       </div>
