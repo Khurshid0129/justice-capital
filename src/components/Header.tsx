@@ -15,42 +15,37 @@ export const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border animate-fade-in-down">
-      <nav className="container mx-auto px-6 py-4">
+  <header className="fixed top-0 left-0 right-0 z-50 site-header bg-secondary text-white shadow-md animate-fade-in-down">
+      <nav className="container mx-auto py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-foreground font-playfair tracking-wider transition-transform duration-300 hover:scale-105">
-            <span className="text-primary">Law agency</span>
+          <div className="text-lg sm:text-2xl font-bold font-playfair tracking-wider transition-transform duration-300 hover:scale-105">
+            <span className="text-white">Law agency</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 font-poppins">
+          <div className="hidden md:flex items-center gap-8 font-sans">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-foreground hover:text-primary transition-colors uppercase text-sm tracking-wide"
+              className="text-white/90 hover:text-white transition-colors uppercase text-sm tracking-wide font-medium"
             >
               {t('nav.home')}
             </button>
             <button
               onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-primary transition-colors uppercase text-sm tracking-wide"
+              className="text-white/90 hover:text-white transition-colors uppercase text-sm tracking-wide font-medium"
             >
               {t('nav.services')}
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors uppercase text-sm tracking-wide"
+              className="text-white/90 hover:text-white transition-colors uppercase text-sm tracking-wide font-medium"
             >
               {t('nav.about')}
             </button>
-            <button
-              onClick={() => scrollToSection('team')}
-              className="text-foreground hover:text-primary transition-colors uppercase text-sm tracking-wide"
-            >
-              {t('nav.team')}
-            </button>
+            {/* Team link removed */}
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors uppercase text-sm tracking-wide"
+              className="text-white/90 hover:text-white transition-colors uppercase text-sm tracking-wide font-medium"
             >
               {t('nav.contact')}
             </button>
@@ -72,34 +67,29 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in-down">
+          <div className="md:hidden mt-3 bg-background/95 px-4 py-4 rounded-b-md border-t border-border flex flex-col gap-3 animate-fade-in-down">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-foreground hover:text-primary transition-colors text-left"
+              className="text-foreground hover:text-primary transition-colors text-left py-2"
             >
               {t('nav.home')}
             </button>
             <button
               onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-primary transition-colors text-left"
+              className="text-foreground hover:text-primary transition-colors text-left py-2"
             >
               {t('nav.services')}
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors text-left"
+              className="text-foreground hover:text-primary transition-colors text-left py-2"
             >
               {t('nav.about')}
             </button>
-            <button
-              onClick={() => scrollToSection('team')}
-              className="text-foreground hover:text-primary transition-colors text-left"
-            >
-              {t('nav.team')}
-            </button>
+            {/* Team link removed */}
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors text-left"
+              className="text-foreground hover:text-primary transition-colors text-left py-2"
             >
               {t('nav.contact')}
             </button>

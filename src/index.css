@@ -8,59 +8,74 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    /*
+      Design tokens for white / blue corporate palette
+      - Primary blue: #1976D2 (used for CTAs)
+      - Header/Footer dark blue: #003366
+      - Background: white or very light gray
+      - Text: dark gray (#333333)
+      - Soft accents: light blue shades (#E3F2FD / #BBDEFB)
+    */
 
-    --card: 0 0% 4%;
-    --card-foreground: 0 0% 100%;
+    /* Page background (white) */
+    --background: 0 0% 100%; /* hsl(0 0% 100%) -> #FFFFFF */
+    /* Primary text / headings (dark gray) */
+    --foreground: 0 0% 20%; /* ~#333333 */
 
-    --popover: 0 0% 4%;
-    --popover-foreground: 0 0% 100%;
+    /* Surface / cards (subtle off-white) */
+    --card: 210 100% 98%; /* very light blue-ish / near white */
+    --card-foreground: 0 0% 10%;
 
-    --primary: 348 79% 48%;
-    --primary-foreground: 0 0% 100%;
+    /* Popovers / modals */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    --secondary: 0 0% 8%;
+    /* Primary brand color - JRT Blue */
+    --primary: 207 70% 42%; /* rgb(33, 113, 181) */
+    --primary-foreground: 0 0% 100%; /* white */
+
+    /* Secondary / darker blue for hover */
+    --secondary: 208 63% 33%; /* rgb(21, 89, 147) */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 60%;
+    /* Muted text / meta */
+    --muted: 0 0% 45%; /* slightly darker gray */
+    --muted-foreground: 0 0% 35%;
 
-    --accent: 348 79% 48%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent / soft section backgrounds */
+    --accent: 204 90% 94%; /* ~#E3F2FD */
+    --accent-foreground: 210 60% 20%;
 
+    /* Destructive (leave as neutral red if used sparingly) */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 348 79% 48%;
+    /* Borders/inputs */
+    --border: 0 0% 90%; /* light border on white */
+    --input: 210 16% 96%;
+    --ring: 207 76% 46%; /* primary */
 
-    --radius: 0rem;
+    --radius: 0.375rem; /* small radius for modern look */
     
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 6%));
-    --shadow-elegant: 0 20px 60px -10px hsl(348 79% 48% / 0.3);
+    /* Hero gradient: soft light blues */
+    --gradient-hero: linear-gradient(135deg, hsl(204 90% 94%), hsl(204 80% 90%));
+    --shadow-elegant: 0 20px 60px -10px hsl(207 76% 46% / 0.12);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
+    /* Header / footer explicit tokens */
+    --header-background: 210 100% 20%; /* #003366 */
+    --footer-background: 210 100% 20%; /* #003366 */
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
+    /* Sidebar tokens (not used widely) */
+    --sidebar-background: 210 100% 98%;
+    --sidebar-foreground: 210 16% 12%;
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 207.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 0 0% 0%;
+    /* Keep dark mode variables minimal; site primary theme is light */
+    --background: 210 10% 8%;
     --foreground: 0 0% 100%;
   }
 }
@@ -118,5 +133,30 @@ All colors MUST be HSL.
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  /* Header and footer specific styles
+     - We set local CSS variables so components using `text-foreground` or similar
+       will pick appropriate contrast values inside header/footer.
+  */
+  .site-header {
+    /* header background uses dark navy */
+    background: hsl(var(--header-background));
+    /* inside header prefer white as foreground */
+    --foreground: var(--secondary-foreground);
+    --muted: 0 0% 80%;
+    --border: 210 100% 18%;
+  }
+
+  .site-footer {
+    background: hsl(var(--footer-background));
+    --foreground: var(--secondary-foreground);
+    --muted: 0 0% 80%;
+    --border: 210 100% 18%;
+  }
+
+  /* Utility: soft section background (light blue) */
+  .section-accent {
+    background: hsl(var(--accent));
   }
 }

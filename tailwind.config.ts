@@ -14,9 +14,16 @@ export default {
     },
     extend: {
       fontFamily: {
-        'playfair': ['Playfair Display', 'serif'],
-        'sans': ['Open Sans', 'sans-serif'],
-        'poppins': ['Poppins', 'sans-serif'],
+        /*
+          Fonts updated for corporate legal look:
+          - body: Open Sans (or Roboto)
+          - heading: Roboto Slab (or Merriweather)
+        */
+  'heading': ['Roboto Slab', 'Merriweather', 'serif'],
+  /* keep a legacy alias used in components */
+  'playfair': ['Roboto Slab', 'Merriweather', 'serif'],
+  'sans': ['Open Sans', 'Roboto', 'sans-serif'],
+  'poppins': ['Poppins', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -35,13 +35,13 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-background" ref={ref}>
+    <section id="services" className="py-24 bg-white" ref={ref}>
       <div className="container mx-auto px-6">
         <div className={`text-center mb-16 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-playfair">
+          <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4 font-serif">
             {t('services.title')}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-sans">
+          <p className="text-xl text-secondary/80 max-w-2xl mx-auto font-sans">
             {t('services.subtitle')}
           </p>
         </div>
@@ -52,19 +52,19 @@ export const Services = () => {
             return (
               <Card
                 key={service.key}
-                className={`bg-card border-border hover:border-primary transition-all duration-300 group cursor-pointer hover-lift ${
+                className={`bg-white border-accent/20 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group cursor-pointer hover-lift ${
                   isVisible ? 'animate-fade-in-up' : 'opacity-0'
                 }`}
                 style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'both' }}
               >
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-all duration-300 group-hover:scale-110">
+                  <div className="w-16 h-16 bg-accent/30 flex items-center justify-center mb-6 rounded-lg group-hover:bg-accent transition-all duration-300 group-hover:scale-110">
                     <Icon className="w-8 h-8 text-primary transition-transform duration-300 group-hover:rotate-6" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4 font-playfair">
+                  <h3 className="text-2xl font-bold text-secondary mb-4 font-serif">
                     {t(`services.${service.key}.title`)}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed font-sans">
+                  <p className="text-secondary/80 leading-relaxed font-sans">
                     {t(`services.${service.key}.description`)}
                   </p>
                 </CardContent>

@@ -6,7 +6,7 @@ export const Footer = () => {
   const { ref, isVisible } = useScrollAnimation(0.1);
 
   return (
-    <footer className="bg-background border-t border-border py-12" ref={ref}>
+  <footer className="site-footer border-t border-border py-12" ref={ref}>
       <div className="container mx-auto px-6">
         <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
           <div>

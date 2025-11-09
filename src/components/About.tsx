@@ -16,27 +16,27 @@ export const About = () => {
   return (
     <section 
       id="about" 
-      className="py-24 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      className="py-24 relative overflow-hidden bg-cover bg-center bg-no-repeat bg-secondary"
       style={{
         backgroundImage: "url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1920&q=80')",
       }}
       ref={ref}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/85 to-black/90"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/95 via-secondary/90 to-secondary/95"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className={`text-center mb-16 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-playfair">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-serif">
               {t('about.title')}
             </h2>
-            <p className="text-xl text-primary mb-8 font-sans font-light">{t('about.subtitle')}</p>
+            <p className="text-xl text-white/90 mb-8 font-sans">{t('about.subtitle')}</p>
           </div>
 
           <div className={`space-y-8 mb-16 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
-            <p className="text-lg text-muted-foreground leading-relaxed font-sans">
+            <p className="text-lg text-white/85 leading-relaxed font-sans">
               {t('about.description')}
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed font-sans">
+            <p className="text-lg text-white/85 leading-relaxed font-sans">
               {t('about.mission')}
             </p>
           </div>
@@ -45,13 +45,13 @@ export const About = () => {
             {stats.map((stat, index) => (
               <Card 
                 key={index} 
-                className={`bg-card border-border p-6 text-center hover-lift transition-all duration-300 ${
+                className={`bg-white/10 backdrop-blur-sm border-white/20 p-6 text-center hover-lift transition-all duration-300 ${
                   isVisible ? 'animate-scale-in' : 'opacity-0'
                 }`}
                 style={{ animationDelay: `${0.4 + index * 0.1}s`, animationFillMode: 'both' }}
               >
-                <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-4xl font-bold text-white mb-2 font-serif">{stat.value}</div>
+                <div className="text-sm text-white/80 font-medium">{stat.label}</div>
               </Card>
             ))}
           </div>
